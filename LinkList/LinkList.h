@@ -187,11 +187,12 @@ bool ListDelete(LinkList*& L, int i, int& e)
 }
 
 
+
 /*
 	==============2019.4.14=================
-	问题：
+	问题：(以查找为基础的算法设计)
 		设计一个算法，删除单链表中元素值最大
-		的元素（假设最大值唯一）
+	的元素（假设最大值唯一）
 	========================================
 */
 void delmaxnode(LinkList*& L)
@@ -210,29 +211,52 @@ void delmaxnode(LinkList*& L)
 	maxpre->next = maxp->next;					//删除maxp 
 	free(maxp);									//释放maxp 
 }
+/*该算法的时间复杂度为O(n)*/
 
 /*
-	===============2019.4.14=========================
-	问题：
+	===============2019.4.16=========================
+	问题：(以查找为基础的算法设计)
 		有一个带头结点的单链表（至少有一个数据节点），
-		设计一个算法，使其数据元素递增有序排列
+	设计一个算法，使其数据元素递增有序排列
 	=================================================
 */
 void sort(LinkList*& L)
 {
 	LinkList* p, * pre, * post;
-	p = L->next->next;
-	L->next->next = NULL;
+	p = L->next->next;			//p指向L的第二个数据节点
+	L->next->next = NULL;		//构造一个只含一个数据节点的有序表
 	while (p != NULL)
 	{
-		post = p->next;
-		pre = L;
+		post = p->next;			//post保存p的后继节点的指针
+		pre = L;				//从有序表的开头进行比较，pre指向插入*p的前驱节点
 		while (pre->next != NULL && p->data > pre->next->data)
 		{
-			pre = pre->next;
+			pre = pre->next;	//在有序表中查找插入*p的前驱节点*pre
 		}
-		p->next = pre->next;
+		p->next = pre->next;	//插入*P
 		pre->next = p;
+		p = post;				//*p指向下一个待插入的数据节点
+	}
+}
+/*该算法的时间复杂度为O(n^2)*/
+
+/*
+	=============2019.4.16===================
+	问题：(以建表为基础的算法设计)
+		假设有一个带头结点的单链表L={a1,a2,a3,...,an}。设计一
+	个算法将所有节点逆置;
+*/
+void reverse(LinkList*& L)
+{
+	LinkList* p, * post;
+	p = L->next;		//p指向L的第一个数据元素
+	L->next = NULL;		//L的数据元素置空
+	while (p != NULL)	//头插法建表
+	{
+		post = p->next;
+		p->next = L->next;
+		L->next = p;
 		p = post;
 	}
 }
+/*该算法的时间复杂度为O(n)*/
