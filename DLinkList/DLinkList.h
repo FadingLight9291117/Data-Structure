@@ -119,5 +119,30 @@ bool ListDelete(DLinkList*& L, int i, int& e)
 		return true;
 	}
 	return false;
+}
 
+/*
+	ÄæÖÃËùÓÐÔªËØ
+*/
+void Reverse(DLinkList*& L)
+{
+	DLinkList* p = L->next;
+	DLinkList* q;
+	L->next = NULL;				//*******
+	while (p != NULL)
+	{
+		q = p;
+		p = p->next;
+		if (L->next == NULL)
+		{
+			q->next = NULL;
+		}
+		else
+		{
+			q->next = L->next;
+			L->next->prior = q;
+		}
+		L->next = q;
+		q->prior = L;
+	}
 }

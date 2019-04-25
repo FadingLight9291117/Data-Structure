@@ -34,9 +34,19 @@ void testDelete()
 	DispList(L);
 	printf("%d", e);
 }
+void testReverse()
+{
+	DLinkList* L;
+	int a[7] = { 2,5,2,1,3,5,9 };
+	CreateDLinkListR(L, a, 7);
+	DispList(L);
+	Reverse(L);
+	DispList(L);
+}
 int main()
 {
 	//testCreateList();
-	testInsert();
+	//testInsert();
 	//testDelete();
+	testReverse();
 }
