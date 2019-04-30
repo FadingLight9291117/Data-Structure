@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "循环单链表", "循环�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "循环双链表", "循环双链表\循环双链表.vcxproj", "{27F4D460-51D6-4EDF-90EE-97E5F3B1F34D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "两个表的自然连接问题", "两个表的自然连接问题\两个表的自然连接问题.vcxproj", "{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{27F4D460-51D6-4EDF-90EE-97E5F3B1F34D}.Release|x64.Build.0 = Release|x64
 		{27F4D460-51D6-4EDF-90EE-97E5F3B1F34D}.Release|x86.ActiveCfg = Release|Win32
 		{27F4D460-51D6-4EDF-90EE-97E5F3B1F34D}.Release|x86.Build.0 = Release|Win32
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Debug|x64.ActiveCfg = Debug|x64
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Debug|x64.Build.0 = Debug|x64
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Debug|x86.ActiveCfg = Debug|Win32
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Debug|x86.Build.0 = Debug|Win32
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Release|x64.ActiveCfg = Release|x64
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Release|x64.Build.0 = Release|x64
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Release|x86.ActiveCfg = Release|Win32
+		{23A8BAD0-1F2A-46ED-9C2B-FFE6881F7C8D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

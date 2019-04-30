@@ -54,3 +54,34 @@ void DispDLinkList(DLinkList* L)
 	}
 	printf("\n");
 }
+
+/*
+	=================================
+	题目：
+		设计判断带头结点的循环双链表L
+		（含两个以上的节点）是否对称相
+		等的算法
+	=================================
+*/
+bool Equal(DLinkList* L)
+{
+	DLinkList* p = L->next;
+	DLinkList* q = L->prior;
+	while (1)
+	{
+		if (p == q || p == q->prior)
+		{
+			return true;
+		}
+		else
+		{
+			p = p->next;
+			q = q->prior;
+		}
+		if (p->data != q->data)
+		{
+			return false;
+		}
+		
+	}
+}

@@ -14,8 +14,16 @@ void testCreateDLinkListR()
 	CreateDLinkListR(L, a, 4);
 	DispDLinkList(L);
 }
+void testEqual()
+{
+	int a[] = { 2,2 };
+	DLinkList* L;
+	CreateDLinkListR(L, a, 2);
+	printf("%d",Equal(L));
+}
 int main()
 {
 	//testCreateDLinkListF();
-	testCreateDLinkListR();
+	//testCreateDLinkListR();
+	testEqual();
 }
